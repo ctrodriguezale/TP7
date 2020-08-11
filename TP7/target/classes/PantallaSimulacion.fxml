@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="700.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.PantallaSimulacionController">
+   <children>
+      <Button fx:id="btnSimular" layoutX="576.0" layoutY="14.0" mnemonicParsing="false" onAction="#simularOnAction" text="Simular" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+      <Label layoutX="14.0" layoutY="18.0" text="Tiempo Simulacion" />
+      <TextField fx:id="txtTiempo" layoutX="124.0" layoutY="14.0" text="20" />
+      <TableView fx:id="tblTabla" layoutX="15.0" layoutY="149.0" prefHeight="536.0" prefWidth="1336.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="149.0">
+        <columns>
+          <TableColumn fx:id="colEvento" prefWidth="75.0" text="Evento" />
+          <TableColumn fx:id="colReloj" prefWidth="75.0" text="reloj" />
+            <TableColumn fx:id="colRndTiempoLlegada" prefWidth="75.0" text="rnd Tiempo entre llegadas" />
+            <TableColumn fx:id="colTiempoLlegadas" prefWidth="75.0" text="tiempo entre llegadas" />
+            <TableColumn fx:id="colProxLlegada" prefWidth="75.0" text="prox llegada" />
+            <TableColumn fx:id="colCola" prefWidth="75.0" text="cola" />
+            <TableColumn fx:id="colTanque1" prefWidth="75.0" text="tanque1">
+               <columns>
+                  <TableColumn fx:id="colEstado1" prefWidth="75.0" text="estado" />
+                  <TableColumn fx:id="colEncendido1" prefWidth="75.0" text="Encendido">
+                     <columns>
+                        <TableColumn fx:id="colTiempoEncendido1" prefWidth="75.0" text="tiempoEncendido" />
+                        <TableColumn fx:id="colFinEncendido1" prefWidth="75.0" text="Fin Encendido" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn fx:id="colBombeo1" prefWidth="75.0" text="Bombeo">
+                     <columns>
+                        <TableColumn fx:id="colRndTamañoBuque1" prefWidth="75.0" text="rnd Tamaño Buque" />
+                        <TableColumn fx:id="colTamaño1" prefWidth="75.0" text="tamaño Buque" />
+                        <TableColumn fx:id="colTiempoBombeo1" prefWidth="75.0" text="tiempo Bombeo" />
+                        <TableColumn fx:id="colFinBombeo1" prefWidth="75.0" text="fin Bombeo" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn fx:id="colLlenadoTanque1" prefWidth="75.0" text="Llenado Tanque">
+                     <columns>
+                        <TableColumn fx:id="colEspacioDisponible1" prefWidth="75.0" text="Espacio Disponible" />
+                        <TableColumn fx:id="colTiempoLlenado1" prefWidth="75.0" text="Tiempo Llenado" />
+                        <TableColumn fx:id="colHoraLlenado1" prefWidth="75.0" text="Hora Llenado" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn fx:id="colDescarga1" prefWidth="75.0" text="Evento Descarga">
+                     <columns>
+                        <TableColumn fx:id="colTiempoDescarga1" prefWidth="75.0" text="Tiempo Descarga" />
+                        <TableColumn fx:id="colFinDescarga1" prefWidth="75.0" text="Fin Descarga" />
+                     </columns></TableColumn>
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="colTanque2" prefWidth="75.0" text="tanque2">
+               <columns>
+                  <TableColumn fx:id="colEstado2" prefWidth="75.0" text="estado" />
+                  <TableColumn fx:id="colEncendido2" prefWidth="75.0" text="Encendido">
+                     <columns>
+                        <TableColumn fx:id="colTiempoEncendido2" prefWidth="75.0" text="tiempoEncendido" />
+                        <TableColumn fx:id="colFinEncendido2" prefWidth="75.0" text="Fin Encendido" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn fx:id="colBombeo2" prefWidth="75.0" text="Bombeo">
+                     <columns>
+                        <TableColumn fx:id="colRndTamañoBuque2" prefWidth="75.0" text="rnd Tamaño Buque" />
+                        <TableColumn fx:id="colTamaño2" prefWidth="75.0" text="tamaño Buque" />
+                        <TableColumn fx:id="colTiempoBombeo2" prefWidth="75.0" text="tiempo Bombeo" />
+                        <TableColumn fx:id="colFinBombeo2" prefWidth="75.0" text="fin Bombeo" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn fx:id="colLlenadoTanque2" prefWidth="75.0" text="Llenado Tanque">
+                     <columns>
+                        <TableColumn fx:id="colEspacioDisponible2" prefWidth="75.0" text="Espacio Disponible" />
+                        <TableColumn fx:id="colTiempoLlenado2" prefWidth="75.0" text="Tiempo Llenado" />
+                        <TableColumn fx:id="colHoraLlenado2" prefWidth="75.0" text="Hora Llenado" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn fx:id="colDescarga2" prefWidth="75.0" text="Evento Descarga">
+                     <columns>
+                        <TableColumn fx:id="colTiempoDescarga2" prefWidth="75.0" text="Tiempo Descarga" />
+                        <TableColumn fx:id="colFinDescarga2" prefWidth="75.0" text="Fin Descarga" />
+                     </columns>
+                  </TableColumn>
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="colTanque3" prefWidth="75.0" text="tanque3">
+               <columns>
+                  <TableColumn fx:id="colEstado3" prefWidth="75.0" text="estado" />
+                  <TableColumn fx:id="colEncendido3" prefWidth="75.0" text="Encendido">
+                     <columns>
+                        <TableColumn fx:id="colTiempoEncendido3" prefWidth="75.0" text="tiempoEncendido" />
+                        <TableColumn fx:id="colFinEncendido3" prefWidth="75.0" text="Fin Encendido" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn fx:id="colBombeo3" prefWidth="75.0" text="Bombeo">
+                     <columns>
+                        <TableColumn fx:id="colRndTamañoBuque3" prefWidth="75.0" text="rnd Tamaño Buque" />
+                        <TableColumn fx:id="colTamaño3" prefWidth="75.0" text="tamaño Buque" />
+                        <TableColumn fx:id="colTiempoBombeo3" prefWidth="75.0" text="tiempo Bombeo" />
+                        <TableColumn fx:id="colFinBombeo3" prefWidth="75.0" text="fin Bombeo" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn fx:id="colLlenadoTanque3" prefWidth="75.0" text="Llenado Tanque">
+                     <columns>
+                        <TableColumn fx:id="colEspacioDisponible3" prefWidth="75.0" text="Espacio Disponible" />
+                        <TableColumn fx:id="colTiempoLlenado3" prefWidth="75.0" text="Tiempo Llenado" />
+                        <TableColumn fx:id="colHoraLlenado3" prefWidth="75.0" text="Hora Llenado" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn fx:id="colDescarga3" prefWidth="75.0" text="Evento Descarga">
+                     <columns>
+                        <TableColumn fx:id="colTiempoDescarga3" prefWidth="75.0" text="Tiempo Descarga" />
+                        <TableColumn fx:id="colFinDescarga3" prefWidth="75.0" text="Fin Descarga" />
+                     </columns>
+                  </TableColumn>
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="colTanque4" prefWidth="75.0" text="tanque4">
+               <columns>
+                  <TableColumn fx:id="colEstado4" prefWidth="75.0" text="estado" />
+                  <TableColumn fx:id="colEncendido4" prefWidth="75.0" text="Encendido">
+                     <columns>
+                        <TableColumn fx:id="colTiempoEncendido4" prefWidth="75.0" text="tiempoEncendido" />
+                        <TableColumn fx:id="colFinEncendido4" prefWidth="75.0" text="Fin Encendido" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn fx:id="colBombeo4" prefWidth="75.0" text="Bombeo">
+                     <columns>
+                        <TableColumn fx:id="colRndTamañoBuque4" prefWidth="75.0" text="rnd Tamaño Buque" />
+                        <TableColumn fx:id="colTamaño4" prefWidth="75.0" text="tamaño Buque" />
+                        <TableColumn fx:id="colTiempoBombeo4" prefWidth="75.0" text="tiempo Bombeo" />
+                        <TableColumn fx:id="colFinBombeo4" prefWidth="75.0" text="fin Bombeo" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn fx:id="colLlenadoTanque4" prefWidth="75.0" text="Llenado Tanque">
+                     <columns>
+                        <TableColumn fx:id="colEspacioDisponible4" prefWidth="75.0" text="Espacio Disponible" />
+                        <TableColumn fx:id="colTiempoLlenado4" prefWidth="75.0" text="Tiempo Llenado" />
+                        <TableColumn fx:id="colHoraLlenado4" prefWidth="75.0" text="Hora Llenado" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn fx:id="colDescarga4" prefWidth="75.0" text="Evento Descarga">
+                     <columns>
+                        <TableColumn fx:id="colTiempoDescarga4" prefWidth="75.0" text="Tiempo Descarga" />
+                        <TableColumn fx:id="colFinDescarga4" prefWidth="75.0" text="Fin Descarga" />
+                     </columns>
+                  </TableColumn>
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="colTanque5" prefWidth="75.0" text="tanque5">
+               <columns>
+                  <TableColumn fx:id="colEstado5" prefWidth="75.0" text="estado" />
+                  <TableColumn fx:id="colEncendido5" prefWidth="75.0" text="Encendido">
+                     <columns>
+                        <TableColumn fx:id="colTiempoEncendido5" prefWidth="75.0" text="tiempoEncendido" />
+                        <TableColumn fx:id="colFinEncendido5" prefWidth="75.0" text="Fin Encendido" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn fx:id="colBombeo5" prefWidth="75.0" text="Bombeo">
+                     <columns>
+                        <TableColumn fx:id="colRndTamañoBuque5" prefWidth="75.0" text="rnd Tamaño Buque" />
+                        <TableColumn fx:id="colTamaño5" prefWidth="75.0" text="tamaño Buque" />
+                        <TableColumn fx:id="colTiempoBombeo5" prefWidth="75.0" text="tiempo Bombeo" />
+                        <TableColumn fx:id="colFinBombeo5" prefWidth="75.0" text="fin Bombeo" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn fx:id="colLlenadoTanque5" prefWidth="75.0" text="Llenado Tanque">
+                     <columns>
+                        <TableColumn fx:id="colEspacioDisponible5" prefWidth="75.0" text="Espacio Disponible" />
+                        <TableColumn fx:id="colTiempoLlenado5" prefWidth="75.0" text="Tiempo Llenado" />
+                        <TableColumn fx:id="colHoraLlenado5" prefWidth="75.0" text="Hora Llenado" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn fx:id="colDescarga5" prefWidth="75.0" text="Evento Descarga">
+                     <columns>
+                        <TableColumn fx:id="colTiempoDescarga5" prefWidth="75.0" text="Tiempo Descarga" />
+                        <TableColumn fx:id="colFinDescarga5" prefWidth="75.0" text="Fin Descarga" />
+                     </columns>
+                  </TableColumn>
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="colAcumuladores" prefWidth="75.0" text="Acumuladores">
+               <columns>
+                  <TableColumn fx:id="colMaxCola" prefWidth="75.0" text="Max Cola" />
+                  <TableColumn fx:id="colDescargados" prefWidth="75.0" text="Descargados" />
+               </columns>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <Label fx:id="lblMaxCola" layoutX="414.0" layoutY="17.0" text="Cant máxima en cola:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotalDescargado" layoutX="718.0" layoutY="17.0" text="Total descargado: ">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="54.0" text="Tiempo Simulacion" />
+      <TextField fx:id="txtLlegada" layoutX="124.0" layoutY="50.0" text="0.125" />
+      <Label layoutX="15.0" layoutY="89.0" text="Tiempo Simulacion" />
+      <TextField fx:id="txtTiempoBombeo" layoutX="125.0" layoutY="85.0" text="10000" />
+      <Label layoutX="14.0" layoutY="121.0" text="Tiempo Simulacion" />
+      <TextField fx:id="txtTiempoDescarga" layoutX="124.0" layoutY="117.0" text="4000" />
+   </children>
+</AnchorPane>
